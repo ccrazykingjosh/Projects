@@ -1,0 +1,17 @@
+{% extends "stockmarketpredictionsapp/basetemplate.html" %}
+{% load static %}
+{% block title %}
+Test Input
+{% endblock %}
+
+
+{% block content %}
+<br>
+<h1 style="text-align : center;">Test Input</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+
+{% endblock %}

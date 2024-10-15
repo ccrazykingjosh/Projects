@@ -1,0 +1,38 @@
+{% extends "stockmarketpredictionsapp/basetemplate.html" %}
+{% load static %}
+{% block title %}
+Results
+{% endblock %}
+
+
+{% block content %}
+
+<h2 style="text-align: center;">Results</h2>
+<br>
+<h5> Lowest Value Today: {% for i in lowvalue %} {{ i }} {% endfor %}</h5><br>
+<h5> Highest Value Today : {% for i in highvalue %} {{ i }} {% endfor %}</h5>
+
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-md-">
+ <div style="outline: 2px dashed black; text-align:center;">
+             <h4>DISCLAIMER</h4>
+      <p >Please keep in mind that these values aren't accurate and should be taken with a grain of salt, the database used to predict these values are updated monthly, as it gets later into the month, the less accurate the predicted values will be.</p>
+
+    </div>    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

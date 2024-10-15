@@ -1,0 +1,21 @@
+{% extends "stockmarketpredictionsapp/basetemplate.html" %}
+{% load static %}
+{% block title %}
+Stock List
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align:center;">Stock List</h1>
+<br>
+
+{% for i in names %}
+<h5>{{ i.sitename }}</h5>
+<form method="post" action="{% url 'companyprofile' %}">
+      {% csrf_token %}
+    <p>To make sure you aren't a bot, please type the company name listed above below to continue to the company profile</p>
+    {{ form.as_p }}
+    <input type="submit" value="Company Profile" class="btn btn-dark">
+</form>
+<hr>
+{% endfor %}
+{% endblock %}
